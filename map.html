@@ -1,0 +1,87 @@
+<head>
+  <title>map</title>
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- jsFiddle will insert css and js -->
+</head>
+
+<body>
+  <div class="cont">
+    <div class="group-items">
+      <input id="pac-input" class="controls " type="text" placeholder="Mansoura ,Cairo" />
+      <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+    </div>
+    <div id="map"></div>
+  </div>
+  <div class="hint-container">
+    <div class="card">
+      <span class="doctor"></span> doctor
+    </div>
+    <div class="card">
+      <span class="nolg"></span> Drunken 
+    </div>
+    <div class="card">
+      <span class="onlin"></span> online
+    </div>
+  </div>
+  <div class="help">
+    <input type="text" class="edit-input edim-input" placeholder="Ask ypur quation">
+    <a class="save-btn   " href="q-coment.html" onclick=" hideInput(this)">Ask</a>
+    <button class="help-p" onclick="showInput(this)" >HELP</button>
+
+   
+  <!-- Load icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- The form -->
+  <!--<div class="container">
+  <form action="#" method="post" class="search-bar" id="srs-b">
+    <input type="text" name="search-query" placeholder="Search" />
+    <button type="submit" class="search-btn">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="#fff"
+        class="w-6 h-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+        />
+      </svg>
+    </button>
+  </form>
+</div>
+ -->
+
+
+  <!-- prettier-ignore -->
+  <script>(g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })
+      ({ key: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg", v: "weekly" });</script>
+  <script src="js/index.js"></script>
+  <script src="js/all.min.js"></script>
+  <script>
+    new WOW().init();
+    function showInput(icon) {
+        var td = icon.parentNode;
+        var input = td.querySelector('.edit-input');
+        var saveBtn = td.querySelector('.save-btn');
+        input.style.display = "block";
+        saveBtn.style.display = "inline-block";
+    }
+
+    function hideInput(btn) {
+        var td = btn.parentNode;
+        var input = td.querySelector('.edit-input');
+        var saveBtn = td.querySelector('.save-btn');
+        input.style.display = "none";
+        saveBtn.style.display = "none";
+    }
+
+</script>
+</body>
+
+</html>

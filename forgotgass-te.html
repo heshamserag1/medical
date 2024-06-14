@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<title>Hello, world!</title>
+<link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+<div class="container-fluid d-flex justify-content-center val">
+
+    <form id="passwordResetRequestForm" class="row g-3 needs-validation justify-content-center align-items-center mb-5 mt-2">
+        <div class="container d-flex flex-column justify-content-center align-items-center my-3 text-center">
+            <h2 class="text-center" data-Lang="forgot_Password">forgot_Password</h2>
+            <p style="color: #8B8B8B;" data-Lang="Enter_your_email" class="m-auto w-75">Enter your phone number</p>
+        </div>
+
+
+        <div class="mb-3 row p-0">
+            <label for="phone" class="form-label" data-Lang="Phone">Phone </label>
+            <input type="tel" class="m-auto form-control border-dark" id="phone">
+        </div>
+        <div class="text-center m-auto">
+            <span id="phoneError" class="error-message"></span>
+        </div>
+        <button onclick="redirectToPage()" style="background-color: #4C3FD7; height: 42px;" class="btn btn-primary customHover" type="button" data-Lang="send">send</button>
+        <a href="forgotpass.html" class="text-decoration-none text-info">try with your email</a>
+    </form>
+</div>
+<script>
+function redirectToPage() {
+    // اختيار الصفحة التي ترغب في توجيه المستخدم إليها
+    var nextPage = "verfication.html";
+
+    // توجيه المستخدم إلى الصفحة المحددة
+    window.location.href = nextPage;
+}
+</script>
+
+
+<script src="./js/script.js" type="module"></script>
+<script src="./js/main.js"></script>
+
+</body>
+</html>

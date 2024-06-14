@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile Page</title>
+    <link rel="shortcut icon" href="images/Logo.png" type="image/x-icon">
+    <!-- outfit font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <!-- outfit font -->
+
+    <!-- Lekton Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lekton:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Lekton Font -->
+
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    
+    <section class="profile-header ">
+        <img src="img/profile-circle.png" alt=""><input type="file" accept="image/*" capture="camera" id="photo" name="photo">
+       <a href="#" class="text-decoration-none"> <span class="edit-icos" onclick="document.getElementById('photo').click()">✎</span></a>
+       
+        <h1>profile name</h1>
+    </section><!--profil-header-->
+
+    <section class="profil-info">
+        <div class="container my-5 py-5">
+            <div class="card w-100 rounded">
+                <table class="table table-striped">
+                    
+                    <tr class="date">
+                        <td class="t-title ">
+                            <img src="img/galleryb.png" alt="">
+                            <p class="p-p">Date of birth : </p>
+                            
+                            <p class="p-b">2002/10/6</p>
+                            <span class="edit-icon" onclick="showInput(this)">✎</span>
+                            <input type="date" class="edit-input edim-input">
+                            <button class="save-btn btn  " onclick="hideInput(this)">Save</button>
+                        </td><!--t-tile-->
+                    </tr><!--date-->
+                    <tr class="chronic py-3">
+                        <td class="t-title">
+                            <img src="img/location.png" alt="">
+                            <p class="p-p">your address : </p>
+                            <p class="p-b">
+                             ahmed maher s.t 
+                            </p>
+                            <span class="edit-icon" onclick="showInput(this)">✎</span>
+                            <input type="text" class="edit-input">
+                            <button class="save-btn btn  " onclick="hideInput(this)">Save</button>
+                        </td><!--t-tile-->
+                    </tr><!--chronic-->
+                    <tr class="doctor">
+                        <td class="t-title ">
+                            <img src="img/Vector.png" alt="">
+                            <p class="p-p">Doctor : </p>
+                            <p class="p-b">profile name <a href="#" class="text-decoration-none"><img
+                                        src="images/messages.png" alt=""></a></p>
+                                        <span class="edit-icon" onclick="showInput(this)">✎</span>
+                                        <input type="text" class="edit-input">
+                                        <button class="save-btn btn " onclick="hideInput(this)">Save</button>
+                        </td><!--t-tile-->
+                    </tr><!--doctor-->
+                    <tr class="chronic py-3">
+                        <td class="t-title">
+                            <img src="img/location.png" alt="">
+                            <p class="p-p">your address : </p>
+                            <p class="p-b">
+                             ahmed maher s.t 
+                            </p>
+                            <span class="edit-icon" onclick="showInput(this)">✎</span>
+                            <input type="text" class="edit-input">
+                            <button class="save-btn btn  " onclick="hideInput(this)">Save</button>
+                        </td><!--t-tile-->
+                    </tr><!--chronic-->
+                    <tr class="doctor">
+                        <td class="t-title ">
+                            <img src="img/Vector.png" alt="">
+                            <p class="p-p">Doctor : </p>
+                            <p class="p-b">profile name <a href="#" class="text-decoration-none"><img
+                                        src="images/Vector1.png" alt=""></a></p>
+                                        <span class="edit-icon" onclick="showInput(this)">✎</span>
+                                        <input type="text" class="edit-input">
+                                        <button class="save-btn btn " onclick="hideInput(this)">Save</button>
+                        </td><!--t-tile-->
+                    </tr><!--doctor-->
+                    
+                  </table>
+            </div><!--card-->
+        </div><!--container-->
+    </section><!--profil-info-->
+    
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+        function showInput(icon) {
+            var td = icon.parentNode;
+            var input = td.querySelector('.edit-input');
+            var saveBtn = td.querySelector('.save-btn');
+            input.style.display = "block";
+            saveBtn.style.display = "inline-block";
+        }
+
+        function hideInput(btn) {
+            var td = btn.parentNode;
+            var input = td.querySelector('.edit-input');
+            var saveBtn = td.querySelector('.save-btn');
+            input.style.display = "none";
+            saveBtn.style.display = "none";
+        }
+
+    </script>
+</body>
+
+</html>
